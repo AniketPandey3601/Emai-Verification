@@ -1,0 +1,139 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+
+ .first h1 span{
+    
+    position: relative;
+        animation: myfirst 6s 1;
+        animation-direction:inherit;
+        // text-align: center;
+        margin: 50;
+        border-style: outset;
+        animation-timing-function: ease-in
+        
+
+        
+         
+}
+.first{
+
+    background-color:#fff8dc
+}
+.first h1{
+    margin-top: 50px;
+        margin-bottom: 80px;
+}
+@keyframes myfirst {
+    0% {
+        color: black;
+        left: 0px;
+        top: 0px;
+    }
+
+    100%{
+        color:black;
+        left:100%;
+        top: 0px;
+        
+    }
+  
+
+  
+}
+
+
+.footy{
+
+    background-color: black;
+    position: relative;
+    width: 100%;
+    bottom: 0px;
+    height: 130px;
+   
+    
+}
+.footy .footer {
+
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    padding: 10px;
+
+
+
+}
+.footy .div1{
+
+    color: white;
+    font-weight: 800;
+    text-align: center;
+    margin:20px;
+}
+
+.Yash{
+    margin-bottom:50px;
+     justify-content: center;
+     width: auto;
+     background-color: rgb(213, 226, 188);
+     margin-left: 350px;
+     margin-right: 350px;
+     padding: 20px;
+     border-radius: 10px;
+    box-shadow: 10px 10px;
+     
+}
+ .Yash .divtag1{
+    text-align: center;
+    margin: 25px;
+
+}
+.Yash .divtag2{
+    margin: 25px;
+    text-align: center;
+}
+.Yash .divtag3{
+
+    display: block;
+        margin-left: 180px;
+        margin-right: 50px;
+        margin: auto;
+        width: 30%;
+}
+.Yash .divtag4{
+
+    text-align: center;
+    font-weight: 700;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+.Yash:hover{
+    background-color: aquamarine;
+    margin-left: 250px;
+    margin-right: 250px;
+    transition-duration: 1s;
+}
+.card-title{
+    align-items: center;
+    text-align: center;
+    font-weight: bolder;
+    font-size:40px;
+}
+.card-text{
+    text-align: center;
+}
+
+.card{
+    margin-left: 25%;
+    margin-right: 25%;
+     margin-bottom: 8%;
+     margin-top: 7%;
+    background-color: blanchedalmond;
+    box-shadow: 10px 10px;
+}
+.card:hover{
+    background-color:blanchedalmond;
+        margin-left: 22%;
+        margin-right: 22%;
+        transition-duration: 2s;
+}
