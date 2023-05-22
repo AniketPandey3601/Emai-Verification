@@ -9,6 +9,12 @@ export default function Form(props) {
     console.log("SUBMIT WAS PRESSED.");
     alert("YOU PRESSED SUBMIT.")
   }
+  const emailchange=()=>{
+
+     var x = document.getElementById("fname");
+     x.value = x.value.toUpperCase();
+     
+  }
   const [text, setText] = useState("enter text here");
   return (
     <div
@@ -26,7 +32,7 @@ export default function Form(props) {
             backgroundColor: props.theme === "light" ? "white" : "grey",
             color: props.theme === "light" ? "black" : "white",
             width: "50%",
-          }}
+        }} onChange={emailchange} id="fname"
         />
 
         <div className="mb-3"></div>

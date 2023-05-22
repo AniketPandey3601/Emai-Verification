@@ -4,7 +4,10 @@ import Form from "./components/Form";
 import Footer from "./components/Footer"
 import './components/Style.scss'
 import React from 'react';
-import photo from './Aniket-Pandey_passport.jpg'
+import photo from './Aniket-Pandey_passport.jpg';
+import photo2 from '../src/email1.jpg'
+
+
 
 
 import { useState } from 'react';
@@ -45,10 +48,28 @@ function App() {
       <div
         className="first"
         // style={{ textAlign:"center", margin:50 ,borderStyle:"outset"}} >
+        style={{
+          backgroundColor: mode === "light" ? "GrayText" : "rgb(116, 130, 91)",
+        }}
       >
         <h1>
           <span>WELCOME TO MY FIRST REACT WEBSITE!</span>
         </h1>
+      </div>
+      <div>
+        <img
+          src={photo2}
+          alt="EmailImage"
+          width="170"
+          height="170"
+          style={{
+            marginLeft: "45%",
+            marginRight: "50%",
+            marginTop: "10px",
+            Color:
+              mode === "light" ? "white" : "grey",
+          }}
+        />
       </div>
       <div className="container text-center">
         <Form
@@ -56,21 +77,36 @@ function App() {
           theme={mode}
         />
       </div>
-      <div class="card">
+      <div
+        class="card"
+        style={{
+          backgroundColor: mode === "light" ? "cornsilk" : "rgb(116, 130, 91)",
+        }}
+      >
         <div class="card-body">
           <h5 class="card-title">WHAT IT DOES?</h5>
           <div>
             <p class="card-text">
-              It Simply Accepts your Email-Id and check whether a given Mail is valid or not.
+              <strong>
+                It Simply Accepts your Email-Id and check whether a given Mail
+                is valid or not.
+              </strong>
             </p>
           </div>
         </div>
       </div>
-      <body className="Yash">
+      <body
+        className="Bodypart"
+        style={{
+          backgroundColor: mode === "light" ? "grey" : "rgb(116, 130, 91)",
+        }}
+      >
         <h4 className="divtag1">ABOUT DEVELOPER</h4>
         <div className="divtag2">
-          I am a React JS Trainee in "MEEFIC" company which is a leading IT
-          Service Provider.
+          <strong>
+            I am a React JS Trainee in "MEEFIC" company which is a leading IT
+            Service Provider.
+          </strong>
         </div>
         <img
           className="divtag3"
