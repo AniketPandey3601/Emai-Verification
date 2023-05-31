@@ -1,5 +1,17 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
+.body {
+             min-height: 100vh;
+             display: flex;
+             flex-direction: column;
+            //  background-color: bisque;
+         }
+
+ .navbar-custom{
+    // height: 200px;
+    margin: 30px;
+    border-radius: 15px;
+ }
 
 
  .first h1 {
@@ -50,16 +62,21 @@
 }
 
 
-.footy{
+
+
+.footdown .footy{
     display: flex;
         min-height: 50vh;
         
         flex-direction: column;
         justify-content: center;
+        
 
     background-color: black;
     position: relative;
     width: 100%;
+
+    margin: auto;
    
     
     
@@ -90,11 +107,11 @@
      justify-content: center;
      width: auto;
     background-color: rgb(116, 130, 91);
-     margin-left: 25%;
-     margin-right: 25%;
+     margin-left: 20%;
+     margin-right: 20%;
      padding: 20px;
      border-radius: 10px;
-    box-shadow: 10px 10px;
+    box-shadow: 15px 15px 10px;
      
 }
  .Bodypart .divtag1{
@@ -130,8 +147,8 @@
 
 .Bodypart:hover{
     background-color: rgb(85, 73, 85);
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 15%;
+    margin-right: 15%;
     
     transition-duration: 2s;
 }
@@ -146,17 +163,18 @@
 }
 
 .card{
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 15%;
+    margin-right: 15%;
      margin-bottom: 8%;
      margin-top: 7%;
     background-color: blanchedalmond;
-    box-shadow: 10px 10px;
+    box-shadow: 15px 15px 10px;
+    
 }
 .card:hover{
     background-color:blanchedalmond;
-        margin-left: 22%;
-        margin-right: 22%;
+        margin-left: 10%;
+        margin-right: 10%;
         transition-duration: 2s;
 }
 

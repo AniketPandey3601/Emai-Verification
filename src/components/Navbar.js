@@ -1,14 +1,18 @@
 import React  from "react";
 import PropTypes from 'prop-types';
+import photo2 from "../email1.jpg";
 
 
 
 export default function Navbar(props) {
   return (
     <nav
-      className={` navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode} `}
+     
+      className={` navbar navbar-expand-lg  navbar-custom navbar-dark bg-dark  `}
+      
     >
       <div className="container-fluid">
+        <img src={photo2} alt="" width="50" height="50"  />
         <a className="navbar-brand" href="#">
           EMAIL-VERIFICATION
         </a>
@@ -35,16 +39,31 @@ export default function Navbar(props) {
                 About
               </a>
             </li>
-            
           </ul>
-          <div className={`form-check form-switch text-${props.mode=='light'?'dark':'light'}`}>
-  <input className="form-check-input"  onClick={props.togglemode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-  <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{props.msg}</label>
-</div>
+          <div
+            className={`form-check form-switch text-${
+              props.mode == "light" ? "light" : "light"
+            }`}
+          >
+            <input
+              className="form-check-input"
+              onClick={props.togglemode}
+              type="checkbox"
+              role="switch"
+              id="flexSwitchCheckDefault"
+            />
+            <label
+              className="form-check-label"
+              htmlFor="flexSwitchCheckDefault"
+            >
+              {props.msg}
+            </label>
           </div>
-          </div>
-
+        </div>
+      </div>
     </nav>
   );
 }
 Navbar.propTypes = {title: PropTypes.string}
+
+// navbar-${props.mode} bg-${props.mode}
