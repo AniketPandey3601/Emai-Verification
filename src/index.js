@@ -3,6 +3,25 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import Submitted from './components/Submitted';
+
+// import { BrowserRouter,Route, Routes, Router } from "react-router-dom";
+
+// import Home from "./components/Home";
+
+
+// export default function Index() {
+//   return (
+//     <BrowserRouter>
+//       <Routes>
+//         <Route path="/" element={<Home />}>
+         
+//           <Route path="/submitted" element={<Submitted />} />
+//         </Route>
+//       </Routes>
+//     </BrowserRouter>
+//   );
+// }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

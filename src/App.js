@@ -11,7 +11,7 @@ import Home from "./components/Home"
 
 
 import 
-{ BrowserRouter as   Route,Routes, BrowserRouter } from "react-router-dom";
+{ BrowserRouter as   Router,Routes,Route } from "react-router-dom";
 
 
 
@@ -47,18 +47,24 @@ function App() {
 
     }
   }
+
+   
    
   
 
   return (
-    <BrowserRouter>
-      <div   className="body" style={{ backgroundColor: mode === "light" ? "azure" : "grey" }}>
+    <Router>
+      <div
+        className="body"
+        style={{
+          backgroundColor: mode === "light" ? "white" : "#373b3e",
+        }}
+      >
         <Navbar
           title="EMAIL-VERIFICATION"
           mode={mode}
           togglemode={togglemode}
           msg={msg}
-         
         ></Navbar>
         <div
           className="body"
@@ -81,7 +87,7 @@ function App() {
             <Route
               path="/submitted"
               element={
-                <Submitted loading={loading} validator={validator}></Submitted>
+                <Submitted loading={loading} validator={validator} mode ={mode}></Submitted>
               }
             ></Route>
           </Routes>
@@ -89,7 +95,7 @@ function App() {
 
         <Footer />
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 

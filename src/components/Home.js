@@ -2,6 +2,7 @@ import React from 'react'
 
 import photo from "../Aniket-Pandey_passport.jpg";
 import photo2 from "../email1.jpg";
+import photo3 from "../emailimage.webp"
 
 import Form from "../components/Form";
 import AOS from "aos";
@@ -33,6 +34,13 @@ export default function Home(props) {
         }}
       >
         <h1>WELCOME TO MY FIRST REACT WEBSITE!</h1>
+      </div>
+      <div className="photo3">
+        <img src={photo3} alt="" width="85%" />
+        <div className="centered">
+            <div className="upper">HEY! WELCOME THERE</div>
+        
+        </div>
       </div>
       <div className="center" data-aos="fade-right" data-aos-delay="1500">
         <img src={photo2} alt="EmailImage" width="170" height="170" />

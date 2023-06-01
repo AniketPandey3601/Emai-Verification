@@ -9,8 +9,8 @@ import cross from "../cross.gif"
 export default function Submitted(props) {
   if (props.loading) {
     return (
-      <div className="Loadingbody" style={{backgroundColor:"grey"}}>
-        <Loading />
+      <div className="Loadingbody" >
+        <Loading mode={props.mode}/>
       </div>
     );
   }
@@ -48,21 +48,48 @@ export default function Submitted(props) {
         <div className="card-header">
           <h3>Email Verification Done</h3>
         </div>
-        <div className="card-body">
-          <h3>
-            Is Delieverable - {props.validator.mail_deliverable ? "Yes" : "No"}
-          </h3>
-          <h3>Is Reachable - {props.validator.reachable ? "Yes" : "No"}</h3>
-          <h3>Username - {props.validator.username}</h3>
+        <div>
+          <table className="table table-striped table-hover">
+            <thead>
+              <tr>
+                <th scope="col">S. No.</th>
+                <th scope="col">Data</th>
+                <th scope="col">Response</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Is Delieverable </td>
+                <td>{props.validator.mail_deliverable ? "Yes" : "No"}</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Is Reachable</td>
+                <td> {props.validator.reachable ? "Yes" : "No"}</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Username</td>
+                <td>{props.validator.username}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        ;
       </div>
     </>
   );
 }
 
-// <div className="card-body">
-//   <h3>Is Devliverable {props.validator.mail_deliverable ? "Yes" : "No"}</h3>
-//   <h3>Is Reachable {props.validator.reachable ? "Yes" : "No"}</h3>
-//   <h3>Username {props.validator.username}</h3>
-// </div>;
+
+
+
+  // /</>* <div className="card-body">
+  //         <h3>
+  //           Is Delieverable - {props.validator.mail_deliverable ? "Yes" : "No"}
+  //         </h3>
+  //         <h3>Is Reachable - {props.validator.reachable ? "Yes" : "No"}</h3>
+  //         <h3>Username - {props.validator.username}</h3>
+  //       </div>
+        
+  //     </div> */

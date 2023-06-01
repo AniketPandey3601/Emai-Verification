@@ -4,15 +4,13 @@ import axios from "axios";
 
 import { Link } from "react-router-dom";
 
-import { useForm } from "react-hook-form";
-import { render } from "react-dom";
 import validator from "validator";
 
 export default function Form(props) {
   let token = "VBsMg7rGHRYiZI3Ly5u9s5WKuMjiVtt3O9atoTJI";
   let [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [isValid, setValid] = useState(false);
+  // const [isValid, setValid] = useState(false);
 
   //  function emailchange(e) {
   //    setEmail(e.target.value);
@@ -63,7 +61,7 @@ export default function Form(props) {
   //        .then((response) => console.log(response.data))
   //        .catch((error) => console.error(error));
 
-  const [text, setText] = useState("enter text here");
+  // const [text, setText] = useState("enter text here");
   return (
     <div
       className="container"
@@ -102,7 +100,7 @@ export default function Form(props) {
             className="btn btn-outline-success btn-lg"
             onClick={handleclick}
             data-aos="fade-left"
-            data-aos-delay="1700"
+            data-aos-delay="1600"
           >
             SUBMIT
           </button>

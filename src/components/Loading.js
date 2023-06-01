@@ -1,7 +1,8 @@
 import React from "react";
 import loader from "../Spinner.gif";
 
-export default function Loading() {
+
+export default function Loading(props) {
   return (
     <>
       <div
@@ -12,16 +13,26 @@ export default function Loading() {
           marginTop: "100px",
         }}
       >
-        <img src={loader} alt="loading" width="50" height="50" />
+        <img src={loader} alt="loading" width="65" height="65" />
       </div>
-
       <div
-        className="loadtext"
-        style={{ textAlign: "center", fontWeight: "bold", fontSize: "50px" }}
+        style={{
+          textAlign: "center",
+          fontWeight: "bold",
+          
+        }}
       >
-        {" "}
-        RESULT IS LOADING!..
+        <h1 style={{color : props.mode === "light" ? "black" :"white"}}> RESULT IS LOADING!..</h1>
       </div>
     </>
   );
 }
+
+
+
+      // <div
+      // 
+      // >
+      //   {" "}
+      //  
+      // </div>;
