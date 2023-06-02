@@ -1,28 +1,25 @@
-import React from 'react'
+import React from "react";
 
 import photo from "../Aniket-Pandey_passport.jpg";
 import photo2 from "../email1.jpg";
-import photo3 from "../emailimage.webp"
+import photo3 from "../emailimage.webp";
+import photo4 from "../Emailservices.png";
 
 import Form from "../components/Form";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from 'react';
-
-
-
-
+import { useEffect } from "react";
 
 export default function Home(props) {
-   useEffect(() => {
-     AOS.init({
-          offset: 120, // offset (in px) from the original trigger point
+  useEffect(() => {
+    AOS.init({
+      offset: 120, // offset (in px) from the original trigger point
       delay: 700, // values from 0 to 3000, with step 50ms
       duration: 1000, // values from 0 to 3000, with step 50ms
-      easing: 'ease-in'
-     }
-     );
-   }, []);
+      easing: "ease-in",
+      once: true,
+    });
+  }, []);
   return (
     <div className="cont" data-aos="fade-up">
       <div
@@ -33,13 +30,25 @@ export default function Home(props) {
             props.mode === "light" ? "GrayText" : "rgb(116, 130, 91)",
         }}
       >
-        <h1>WELCOME TO MY FIRST REACT WEBSITE!</h1>
+        <h1>WELCOME TO MY WEBSITE!</h1>
       </div>
       <div className="photo3">
         <img src={photo3} alt="" width="85%" />
         <div className="centered">
-            <div className="upper">HEY! WELCOME THERE</div>
-        
+          <div className="upper">VERIFY EMAIL</div>
+        </div>
+      </div>
+      <div className="textintro">
+        <div className="service" data-aos="fade-right">
+          <h1>WHAT WE DO?</h1>
+          <p>
+            We Provide You with free
+            <br />
+            Email Verification Services.
+          </p>
+        </div>
+        <div className="imgcont" data-aos="fade-left" style={{}}>
+          <img src={photo4} alt="" width="75%" height="60%"  />
         </div>
       </div>
       <div className="center" data-aos="fade-right" data-aos-delay="1500">
@@ -84,7 +93,7 @@ export default function Home(props) {
             props.mode === "light" ? "grey" : "rgb(116, 130, 91)",
         }}
       >
-        <h4 className="divtag1">ABOUT DEVELOPER</h4>
+        <h3 className="divtag1">ABOUT DEVELOPER</h3>
         <div className="divtag2">
           <strong>
             I am a React JS Trainee in "MEEFIC" company which is a leading IT

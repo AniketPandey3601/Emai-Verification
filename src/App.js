@@ -1,6 +1,5 @@
 import './App.css';
 import Navbar from './components/Navbar';
-
 import Footer from "./components/Footer"
 import './components/Style.scss'
 import React from 'react';
@@ -10,8 +9,12 @@ import Submitted  from './components/Submitted';
 import Home from "./components/Home"
 
 
-import 
-{ BrowserRouter as   Router,Routes,Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  
+} from "react-router-dom";
 
 
 
@@ -67,11 +70,12 @@ function App() {
           msg={msg}
         ></Navbar>
         <div
-          className="body"
+          className="body" id= "view"
           // style={{ backgroundColor: mode === "light" ? "azure" : "grey" }}
         >
           <Routes>
             <Route
+              exact
               path="/"
               element={
                 <Home
@@ -85,9 +89,14 @@ function App() {
             ></Route>
 
             <Route
+              exact
               path="/submitted"
               element={
-                <Submitted loading={loading} validator={validator} mode ={mode}></Submitted>
+                <Submitted
+                  loading={loading}
+                  validator={validator}
+                  mode={mode}
+                ></Submitted>
               }
             ></Route>
           </Routes>
@@ -95,6 +104,7 @@ function App() {
 
         <Footer />
       </div>
+      
     </Router>
   );
 }

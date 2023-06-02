@@ -6,7 +6,9 @@ import cross from "../cross.gif"
 
 
 
+
 export default function Submitted(props) {
+  
   if (props.loading) {
     return (
       <div className="Loadingbody" >
@@ -77,6 +79,7 @@ export default function Submitted(props) {
           </table>
         </div>
       </div>
+      
     </>
   );
 }

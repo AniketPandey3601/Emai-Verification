@@ -100,7 +100,7 @@ export default function Form(props) {
             className="btn btn-outline-success btn-lg"
             onClick={handleclick}
             data-aos="fade-left"
-            data-aos-delay="1600"
+            data-aos-delay="900"
           >
             SUBMIT
           </button>
