@@ -1,23 +1,43 @@
 import React from "react";
+import { useEffect } from "react";
 
 import Loading from "../components/Loading";
 import send from "../emailver.gif"
 import cross from "../cross.gif"
+import { useNavigate } from "react-router-dom";
+
 
 
 
 
 export default function Submitted(props) {
-  
+  const navigate = useNavigate();
+
+
+useEffect(() => {
+  const beforeunloadHandle = () => {
+    return true;
+  };
+
+  window.addEventListener("beforeunload", beforeunloadHandle);
+  return () => {
+    window.removeEventListener("removeEventListener", beforeunloadHandle);
+  };
+}, []);
+
+
+
+
+//  typeof (props.validator.mail_deliverable !== "undefined");
   if (props.loading) {
     return (
-      <div className="Loadingbody" >
-        <Loading mode={props.mode}/>
+      <div className="Loadingbody">
+        <Loading mode={props.mode} />
       </div>
     );
   }
 
-  return (
+  else if(props.response){return (
     <>
       <div
         className="text-center"
@@ -79,20 +99,33 @@ export default function Submitted(props) {
           </table>
         </div>
       </div>
-      
+      <div className="text-center">
+        <button
+          type="reset"
+          className="btn btn-outline-success btn-lg "
+          onClick={() => navigate(-1)}
+        >
+          {" "}
+          GO Back
+        </button>
+      </div>
     </>
   );
+}
+
+else if (!(props.response)) {
+    return( 
+    
+    <h1 className="text-center">NETWORK ERROR WAS FOUND.</h1>
+    
+    );
+  }
+
 }
 
 
 
 
-  // /</>* <div className="card-body">
-  //         <h3>
-  //           Is Delieverable - {props.validator.mail_deliverable ? "Yes" : "No"}
-  //         </h3>
-  //         <h3>Is Reachable - {props.validator.reachable ? "Yes" : "No"}</h3>
-  //         <h3>Username - {props.validator.username}</h3>
-  //       </div>
-        
-  //     </div> */
+
+
+

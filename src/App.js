@@ -3,10 +3,10 @@ import Navbar from './components/Navbar';
 import Footer from "./components/Footer"
 import './components/Style.scss'
 import React from 'react';
-
-
 import Submitted  from './components/Submitted';
 import Home from "./components/Home"
+
+
 
 
 import {
@@ -35,8 +35,9 @@ function App() {
 
   const[mode , setmode] = useState('light');
   const [msg, setmsg] = useState("Enable Dark Mode");
+  const [response, setResponse] = useState(false);
   
-  const togglemode = ()=>{
+ const togglemode = ()=>{
     if(mode === 'light'){
       setmode('dark');
       // document.body.style.backgroundColor = "grey";
@@ -70,7 +71,8 @@ function App() {
           msg={msg}
         ></Navbar>
         <div
-          className="body" id= "view"
+          className="body"
+          id="view"
           // style={{ backgroundColor: mode === "light" ? "azure" : "grey" }}
         >
           <Routes>
@@ -84,6 +86,8 @@ function App() {
                   validator={validator}
                   setLoading={setLoading}
                   setValidator={setValidator}
+                  response={response}
+                  setResponse={setResponse}
                 ></Home>
               }
             ></Route>
@@ -96,15 +100,17 @@ function App() {
                   loading={loading}
                   validator={validator}
                   mode={mode}
+                  response={response}
+                  setResponse={setResponse}
                 ></Submitted>
               }
             ></Route>
           </Routes>
         </div>
+        
 
         <Footer />
       </div>
-      
     </Router>
   );
 }

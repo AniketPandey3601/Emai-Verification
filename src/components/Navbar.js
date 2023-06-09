@@ -13,7 +13,7 @@ export default function Navbar(props) {
       <div className="container-fluid">
         <img src={photo2} alt="" width="50" height="50" />
         <a className="navbar-brand" href="/">
-          EMAIL-VERIFICATION
+          ATDARATE
         </a>
         <button
           className="navbar-toggler"

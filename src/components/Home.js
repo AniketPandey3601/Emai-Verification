@@ -10,6 +10,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
+
 export default function Home(props) {
   useEffect(() => {
     AOS.init({
@@ -44,11 +45,12 @@ export default function Home(props) {
           <p>
             We Provide You with free
             <br />
-            Email Verification Services.
+            <strong>Email Verification Services</strong>.All you have to do is
+            provide your Email in Verification box
           </p>
         </div>
         <div className="imgcont" data-aos="fade-left" style={{}}>
-          <img src={photo4} alt="" width="75%" height="60%"  />
+          <img src={photo4} alt="" width="75%" height="60%" />
         </div>
       </div>
       <div className="center" data-aos="fade-right" data-aos-delay="1500">
@@ -62,7 +64,9 @@ export default function Home(props) {
           validator={props.validator}
           setLoading={props.setLoading}
           setValidator={props.setValidator}
-        />
+          setResponse = {props.setResponse}
+          response = {props.response}
+       />
       </div>
 
       <div

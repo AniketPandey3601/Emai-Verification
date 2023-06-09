@@ -10,11 +10,15 @@ export default function Form(props) {
   let token = "VBsMg7rGHRYiZI3Ly5u9s5WKuMjiVtt3O9atoTJI";
   let [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  // const [isValid, setValid] = useState(false);
 
-  //  function emailchange(e) {
-  //    setEmail(e.target.value);
-  //  }
+ 
+ 
+  
+
+
+     
+
+  
 
   const validateEmail = (e) => {
     var email = e.target.value;
@@ -26,42 +30,39 @@ export default function Form(props) {
     }
   };
 
-  function handleclick(e) {
-    if (!validator.isEmail(email)) {
-      e.preventDefault();
-    }
+    
 
-    console.log("submit pressed");
-    let data = new FormData();
-    data.append("email", email);
-    props.setLoading(true);
-    axios
-      .post("https://api.oyyi.xyz/v1/mail-verifier", data, {
-        headers: {
-          "Content-Type": "application/json",
-          accept: "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      })
-      .then((res) => {
-        props.setValidator(res.data.data);
-        console.log(res.data.data);
-      })
-      .catch((e) => alert(e))
-      .finally(() => props.setLoading(false));
-  }
-  // //  const data = { email : "myfakemail@dummy.com" };
+        function handleclick(e) {
+          if (!validator.isEmail(email)) {
+            e.preventDefault();
+          }
 
-  //   const handleclick = ()=>{
-
-  //     console.log("SUBMIT WAS PRESSED.");
-  //     alert("YOU PRESSED SUBMIT.");
-
-  //       Axios.post(url, data, config)
-  //        .then((response) => console.log(response.data))
-  //        .catch((error) => console.error(error));
-
-  // const [text, setText] = useState("enter text here");
+          console.log("submit pressed");
+          let data = new FormData();
+          data.append("email", email);
+          props.setLoading(true);
+          axios
+            .post("https://api.oyyi.xyz/v1/mail-verifier", data, {
+              headers: {
+                "Content-Type": "application/json",
+                accept: "application/json",
+                Authorization: `Bearer ${token}`,
+              },
+            })
+            .then((res) => {
+              props.setValidator(res.data.data);
+              console.log(res.data.data);
+             
+              if (res.status === 200) {
+                props.setResponse(true);
+              
+              }
+            })
+            .catch((e) => alert(e))
+            .finally(() => props.setLoading(false));
+        }
+    
+  
   return (
     <div
       className="container"
@@ -72,7 +73,7 @@ export default function Form(props) {
         color: props.mode === "light" ? "black" : "white",
       }}
     >
-      <h1 style={{ color: props.mode === "light" ? "black" : "white" }}>
+      <h1 style={{ color: props.mode === "light" ? "black" : "white" , fontFamily: "Arial, Helvetica, sans-serif"}}>
         {props.heading}
       </h1>
 
@@ -82,7 +83,7 @@ export default function Form(props) {
           style={{
             backgroundColor: props.mode === "light" ? "white" : "grey",
             color: props.mode === "light" ? "black" : "white",
-            width: "50%",
+            width: "60%",
           }}
           onChange={(e) => validateEmail(e)}
           id="fname"
