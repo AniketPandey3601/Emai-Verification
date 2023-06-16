@@ -96,6 +96,7 @@ export default function Home(props) {
           backgroundColor:
             props.mode === "light" ? "grey" : "rgb(116, 130, 91)",
         }}
+        id="about"
       >
         <h3 className="divtag1">ABOUT DEVELOPER</h3>
         <div className="divtag2">

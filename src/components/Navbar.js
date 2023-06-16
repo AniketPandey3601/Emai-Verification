@@ -2,6 +2,7 @@ import React  from "react";
 import PropTypes from 'prop-types';
 import photo2 from "../email1.jpg";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link/dist/react-router-hash-link.cjs.production";
 
 
 
@@ -34,10 +35,10 @@ export default function Navbar(props) {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="#">
+              <HashLink className="nav-link" to="#about" smooth>
                 {" "}
                 About Us
-              </Link>
+              </HashLink>
             </li>
             {/* <li className="nav-item">
               <a className="nav-link" href="#">

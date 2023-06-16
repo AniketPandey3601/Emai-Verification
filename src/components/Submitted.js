@@ -106,7 +106,7 @@ useEffect(() => {
           onClick={() => navigate(-1)}
         >
           {" "}
-          GO Back
+          &larr; GO Back
         </button>
       </div>
     </>
